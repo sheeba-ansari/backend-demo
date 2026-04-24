@@ -1,0 +1,16 @@
+name: CI/CD pipeline 
+
+on:
+push:
+branches:
+- main  # runs when code is pushed
+job:
+build:
+runs-on: ubuntu-latest
+steps:
+-  name : Checkout code 
+uses: actions/checkout@v3
+- name: install dependencies
+run: npm install 
+- name: Build checkout
+run: echo "Build successful"
